@@ -1,0 +1,53 @@
+.flex-container{
+    display: flex;
+}
+
+h1{
+font-size: 4em;
+    color: #004875;
+    border: 8px solid;
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    border-image: linear-gradient(to right, #B7EAFD , #FFE28A , #C7EF84);
+  border-image-slice: 1;
+
+}
+
+a{
+    color: white;
+    font-size: 3em;
+    padding: 15px 65px;
+    text-align: center;
+    background-color: #004875;
+    margin: 0px;
+    margin-left: 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    border: 1px solid #004875;
+    transition-duration: 0.3s;
+}
+
+a:visited{
+    color: white;
+}
+a:hover{
+    background-color: #ECEEF8;
+    color: #004875;
+}
+
+#buttonIndex{
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+#buttonOben{
+    width 100%;
+    justify-content: flex-end;
+}
+
+#bO{
+font-size: 1.75em;
+    padding: 15px;
+}

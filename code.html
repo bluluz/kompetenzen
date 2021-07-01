@@ -1,0 +1,103 @@
+
+Copy to Clipbar
+
+$("input[name='kompetenzenglisch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzenglisch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#kompetenzenglischtext").val(countries.join(" "));
+                var copyText = document.getElementById("kompetenzenglischtext");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzdeutsch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzdeutsch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#kompetenzdeutschtext").val(countries.join(" "));
+                var copyText = document.getElementById("kompetenzdeutschtext");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzmathe']").change(function() {
+                var checkedCountries = $("input[name='kompetenzmathe']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#kompetenzmathetext").val(countries.join(" "));
+                var copyText = document.getElementById("kompetenzmathetext");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+                                                            
+
+            /* Menü 
+
+            $("#idButton").click(function() {
+                $("#divNachButton").toggle();
+            });
+            $('#divNachButton').hide();
+            
+            Copy Kompetenzen
+            
+            $('#bFachKlasseNummern').click(function() {
+                $("#aufnamedesFachs").hide();
+                var element = jQuery('#bFachKlasseNummern').clone();
+                element.appendTo(($('#namedesFachs')).empty());
+                $("#E1").val("nacheinander die Typen der geschafft Dinger");
+                $("#E2").val("nacheinander die Typen der geschafft Dinger");
+                $("#E3").val("nacheinander die Typen der geschafft Dinger");
+                $("#E4").val("nacheinander die Typen der geschafft Dinger");
+            });
+
+
+Auswahl ( 3 Ebenen oder weniger, dann einfach div class kompetenz gleich nach div id auf + ebene) 
+
+            <button class="fach" id="namedesFachs">namedesFachs</button>
+                    <div id="aufnamedesFachs">
+                        <button class="ebene1" id="überschriftErsteEbene">überschriftErsteEbene</button>
+                        <div id="auf + überschriftErsteEbene">
+                            <button class="ebene2" id="überschriftZweiteEbene">überschriftZweiteEbene</button>
+                            <div id="auf + überschriftZweiteEbene">
+                                <button class="ebene3" id="überschriftDritteEbene">überschriftDritteEbene</button><br>
+                                <div id="auf + überschriftDritteEbene">
+                                    <div class="kompetenz">
+                                        <button class="k"  id="bFachKlasseNummern">... offizielle Formulierung</button><br>
+                                    </div></div></div></div></div>
+                                        
+                                        
+    Checkboxes
+            <div class="checkboxes">
+                        <p class="Ueberschriften">Englisch</p>       
+                        <div id="FachKlasseNummern">
+                        <input type="radio" name="kompetenz + namedesFachs" id="E1">übertroffen
+                        <input type="radio" name="kompetenz + namedesFachs" id="E2">erfüllt
+                        <input type="radio" name="kompetenz + namedesFachs" id="E3">nur teils erfüllt
+                        <input type="radio" name="kompetenz + namedesFachs" id="E4">nicht/nur mit Hilfe<br>
+                        </div>
+                        <p class="Ueberschriften">Mathematik</p>
+                        <div id="FachKlasseNummern">
+                        <input type="radio" name="kompetenzmathe" id="M1">übertroffen
+                        <input type="radio" name="kompetenzmathe" id="M2">erfüllt
+                        <input type="radio" name="kompetenzmathe" id="M3">nur teils erfüllt
+                        <input type="radio" name="kompetenzmathe" id="M4">nicht/nur mit Hilfe<br>
+                        </div>
+                        <p class="Ueberschriften">Deutsch</p>
+                        <div id="FachKlasseNummern">
+                        <input type="radio" name="kompetenzdeutsch" id="D1">übertroffen
+                        <input type="radio" name="kompetenzdeutsch" id="D2">erfüllt
+                        <input type="radio" name="kompetenzdeutsch" id="D3">nur teils erfüllt
+                        <input type="radio" name="kompetenzdeutsch" id="D4">nicht/nur mit Hilfe<br>
+                        </div>
+                        </div>
+            */

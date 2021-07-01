@@ -1,0 +1,744 @@
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="media/notebook2.ico" type="image/vnd.microsoft.icon" />
+    <title>Kompetenzen 6.Klasse Schülerin</title>
+    <link rel="stylesheet" href="styles/formulierungen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        
+/* Copy entsprechende Formulierung zu Clipboard + show in textarea */
+
+        $(document).ready(function() {
+            
+            
+            /*neuer Schüler*/
+            $("#new").click(function() {
+            $('.rad').prop('checked', false);
+            $("#text").val("");
+            });
+            
+            $("input[name='kompetenzenglisch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzenglisch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzdeutsch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzdeutsch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzmathe']").change(function() {
+                var checkedCountries = $("input[name='kompetenzmathe']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+/* Hide/Show Menu */
+            
+            /*Englisch*/
+            
+            $("#englisch").click(function() {
+                $("#aufenglisch").toggle();
+            });
+            $('#aufenglisch').hide();
+
+            $("#KommunikativeKompetenzen").click(function() {
+                $("#aufKommunikativeKompetenzen").toggle();
+            });
+            $('#aufKommunikativeKompetenzen').hide();
+
+            $("#KommunikativeFertigkeiten").click(function() {
+                $("#aufKommunikativeFertigkeiten").toggle();
+            });
+            $('#aufKommunikativeFertigkeiten').hide();
+
+            $("#Hoerverstehen").click(function() {
+                $("#aufHoerverstehen").toggle();
+            });
+            $('#aufHoerverstehen').hide();
+
+            $("#sprechen").click(function() {
+                $("#aufsprechen").toggle();
+            });
+            $('#aufsprechen').hide();
+            
+            
+            
+            /*Deutsch*/
+            
+            $("#deutsch").click(function() {
+                $("#aufdeutsch").toggle();
+            });
+            $('#aufdeutsch').hide();
+            
+            $("#lernbereich1").click(function() {
+                $("#auflernbereich1").toggle();
+            });
+            $('#auflernbereich1').hide();
+            
+            $("#verstehendzuhören").click(function() {
+                $("#aufverstehendzuhören").toggle();
+            });
+            $('#aufverstehendzuhören').hide()
+            
+            
+            /*Mathe*/
+            
+            $("#mathe").click(function() {
+                $("#aufmathe").toggle();
+            });
+            $('#aufmathe').hide();
+            
+            $("#bruchzahlen").click(function() {
+                $("#aufbruchzahlen").toggle();
+            });
+            $('#aufbruchzahlen').hide();
+            
+            $("#erweiterungbruch").click(function() {
+                $("#auferweiterungbruch").toggle();
+            });
+            $('#auferweiterungbruch').hide();
+            
+            $("#rechnenbruch").click(function() {
+                $("#aufrechnenbruch").toggle();
+            });
+            $('#aufrechnenbruch').hide();
+            
+            $("#rationale").click(function() {
+                $("#aufrationale").toggle();
+            });
+            $('#aufrationale').hide();
+            
+            $("#erweiterungrat").click(function() {
+                $("#auferweiterungrat").toggle();
+            });
+            $('#auferweiterungrat').hide();
+            
+            $("#rechnenrat").click(function() {
+                $("#aufrechnenrat").toggle();
+            });
+            $('#aufrechnenrat').hide();
+            
+            $("#geometrisch").click(function() {
+                $("#aufgeometrisch").toggle();
+            });
+            $('#aufgeometrisch').hide();
+            
+            $("#flaecheninhalt").click(function() {
+                $("#aufflaecheninhalt").toggle();
+            });
+            $('#aufflaecheninhalt').hide();
+            
+            $("#rauminhalt").click(function() {
+                $("#aufrauminhalt").toggle();
+            });
+            $('#aufrauminhalt').hide();
+            
+            $("#daten").click(function() {
+                $("#aufdaten").toggle();
+            });
+            $('#aufdaten').hide();
+            
+            $("#gleichungen").click(function() {
+                $("#aufgleichungen").toggle();
+            });
+            $('#aufgleichungen').hide();
+            
+
+
+            
+/* Go to Auswahl-Mode */
+            
+      /*Englisch Kompetenzen*/
+            
+            $("#bE61131").click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery("#bE61131").clone();
+                element.appendTo(($('#englisch')).empty());
+                $("#E1").val("Die Schülerin verständigt sich sicher in alltäglichen Begegnungs- und Dienstleistungssituationen (z. B. Begegnung in der Jugendherberge) und beteiligt sich sprachlich verständlich an Gesprächen, in denen es um einen einfachen direkten Austausch alltäglicher konkreter Informationen geht (z. B. Wohnung und eigenes Zimmer). Dabei formuliert sie kurze Aussagen und Fragen und reagiert auf solche. Bei Bedarf teilt sie in einfacher sprachlicher Form mit, dass sie etwas nicht versteht.");
+                $("#E2").val("Die Schülerin verständigt sich recht sicher in alltäglichen Begegnungs- und Dienstleistungssituationen (z. B. Begegnung in der Jugendherberge) und beteiligt sich sprachlich angemessen an Gesprächen, in denen es um einen einfachen direkten Austausch alltäglicher konkreter Informationen geht (z. B. Wohnung und eigenes Zimmer). Dabei kann sie kurze Aussagen und Fragen formulieren und reagiert auf solche. Bei Bedarf teilt sie in einfacher sprachlicher Form mit, dass sie etwas nicht versteht.");
+                $("#E3").val("Die Schülerin verständigt sich zunehmend sicherer in alltäglichen Begegnungs- und Dienstleistungssituationen (z. B. Begegnung in der Jugendherberge) und beteiligt sich nicht immer sprachlich angemessen an Gesprächen, in denen es um einen einfachen direkten Austausch alltäglicher konkreter Informationen geht (z. B. Wohnung und eigenes Zimmer). Dabei bereitet es ihr bisweilen Probleme, kurze Aussagen und Fragen zu formulieren und auf solche zu reagieren. Bei Bedarf kann sie noch nicht immer in einfacher sprachlicher Form mitteilen, dass sie etwas nicht versteht.");
+                $("#E4").val("Die Schülerin verständigt sich noch unsicher in alltäglichen Begegnungs- und Dienstleistungssituationen (z. B. Begegnung in der Jugendherberge) und beteiligt sich noch nicht sprachlich angemessen an Gesprächen, in denen es um einen einfachen direkten Austausch alltäglicher konkreter Informationen geht (z. B. Wohnung und eigenes Zimmer). Dabei bereitet es ihr Probleme, kurze Aussagen und Fragen zu formulieren und auf solche zu reagieren. Bei Bedarf fällt es ihr schwer, in einfacher sprachlicher Form mitteilen, dass sie etwas nicht versteht.");
+            });
+            
+            $('#bE61132').click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery('#bE61132').clone();
+                element.appendTo($('#englisch').empty());
+                $("#E1").val("Die Schülerin berichtet und erzählt sprachlich verständlich von Tätigkeiten und Ereignissen aus ihrem Erfahrungsbereich (z. B. Schulfeste, Sportveranstaltungen). Dafür verwendet sie sehr häufig gebrauchte Redemittel und grundlegende Strukturen.");
+                $("#E2").val("Die Schülerin berichtet und erzählt sprachlich angemessen von Tätigkeiten und Ereignissen aus ihrem Erfahrungsbereich (z. B. Schulfeste, Sportveranstaltungen). Dafür verwendet sie häufig gebrauchte Redemittel und grundlegende Strukturen.");
+                $("#E3").val("Die Schülerin berichtet und erzählt nicht immer sprachlich angemessen von Tätigkeiten und Ereignissen aus ihrem Erfahrungsbereich (z. B. Schulfeste, Sportveranstaltungen). Dafür verwendet sie zunehmend sicherer häufig gebrauchte Redemittel und grundlegende Strukturen.");
+                $("#E4").val("Die Schülerin berichtet und erzählt noch nicht sprachlich angemessen von Tätigkeiten und Ereignissen aus ihrem Erfahrungsbereich (z. B. Schulfeste, Sportveranstaltungen). Dafür häufig gebrauchte Redemittel und grundlegende Strukturen zu verwenden fällt ihr schwer.");
+            });
+            
+            $('#bE61133').click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery('#bE61133').clone();
+                element.appendTo($('#englisch').empty());
+                $("#E1").val("Die Schülerin kann eine kurze einfache Präsentation zu einem vertrauten Thema (z.B. Heimatort) in Form einer einfachen listenhaften Aufzählung sprachlich verständlich halten. Dabei setzt sie sicher Visualisierungstechniken ein (z.B. Plakate). Es fällt ihr leicht, kurze Notizen als Gedächtnisstütze zu nutzen und sich zur Vorbereitung an detaillierten Mustern zu orientieren.");
+                $("#E2").val("Die Schülerin kann eine kurze einfache Präsentation zu einem vertrauten Thema (z.B. Heimatort) in Form einer einfachen listenhaften Aufzählung sprachlich angemessen halten. Dabei setzt sie recht sicher Visualisierungstechniken ein (z.B. Plakate). Es fällt ihr zunehmend leichter, kurze Notizen als Gedächtnisstütze zu nutzen und sich zur Vorbereitung an detaillierten Mustern zu orientieren.");
+                $("#E3").val("Die Schülerin kann eine kurze einfache Präsentation zu einem vertrauten Thema (z.B. Heimatort) in Form einer einfachen listenhaften Aufzählung noch nicht immer sprachlich angemessen halten. Dabei setzt sie zunehmend sicherer Visualisierungstechniken ein (z.B. Plakate). Bisweilen nutzt sie kurze Notizen als Gedächtnisstütze und orientiert sich zur Vorbereitung an detaillierten Mustern.");
+                $("#E4").val("Die Schülerin kann eine kurze einfache Präsentation zu einem vertrauten Thema (z.B. Heimatort) in Form einer einfachen listenhaften Aufzählung noch nicht sprachlich angemessen halten. Dabei setzt sie bisweilen sehr unsicher Visualisierungstechniken ein (z.B. Plakate). Es fällt ihr schwer, kurze Notizen als Gedächtnisstütze zu nutzen und sich zur Vorbereitung an detaillierten Mustern zu orientieren.");
+            });
+            
+            
+     /*Deutsch Kompetenzen*/
+            
+            $('#bD6111').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD6111').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin wendet in Zuhörsituationen ihre Aufmerksamkeit bewusst auf das Gesagte, gibt Rückmeldung und fasst passend in eigenen Worten zusammen.");
+                $("#D2").val("Die Schülerin wendet meist in Zuhörsituationen ihre Aufmerksamkeit bewusst auf das Gesagte, gibt Rückmeldung und fasst recht passend in eigenen Worten zusammen.");
+                $("#D3").val("Die Schülerin wendet bisweilen in Zuhörsituationen ihre Aufmerksamkeit bewusst auf das Gesagte, gibt Rückmeldung und fasst zunehmend passender in eigenen Worten zusammen.");
+                $("#D4").val("Die Schülerin wendet noch nicht in Zuhörsituationen ihre Aufmerksamkeit bewusst auf das Gesagte, gibt Rückmeldung und fasst sehr unsicher in eigenen Worten zusammen.");
+            });
+            
+            $('#bD6112').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD6112').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin formuliert sicher zu gesprochenen Texten einfache Verständnisfragen.");
+                $("#D2").val("Die Schülerin formuliert recht sicher zu gesprochenen Texten einfache Verständnisfragen.");
+                $("#D3").val("Die Schülerin formuliert noch nicht immer sicher zu gesprochenen Texten einfache Verständnisfragen.");
+                $("#D4").val("Die Schülerin formuliert noch unsicher zu gesprochenen Texten einfache Verständnisfragen.");
+            });
+            
+            $('#bD6113').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD6113').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin folgt Inhalten aus Hörmedien (z. B. Detektivgeschichten) aktiv und wertet das Gehörte selbstständig zusammenfassend aus.");
+                $("#D2").val("Die Schülerin folgt Inhalten aus Hörmedien (z. B. Detektivgeschichten) aktiv und wertet das Gehörte zusammenfassend aus.");
+                $("#D3").val("Die Schülerin folgt Inhalten aus Hörmedien (z. B. Detektivgeschichten) und wertet das Gehörte nach Anleitung aus. ");
+                $("#D4").val("Die Schülerin folgt Inhalten aus Hörmedien (z. B. Detektivgeschichten) passiv und benötigt zur Auswertung das Gehörte Unterstützung.");
+            });
+            
+            
+      /*Mathe Kompetenzen*/
+            
+            $('#bM6111').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6111').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin stellt sehr sicher Bruchteile handelnd her, zeichnet diese in verschiedenen Flächenformen und markiert sie am Zahlenstrahl. Zu verschiedenartigen Darstellungen nennt sie passende Brüche.");
+                $("#M2").val("Die Schülerin stellt meist sicher Bruchteile handelnd her, zeichnet diese in verschiedenen Flächenformen und markiert sie am Zahlenstrahl. Zu verschiedenartigen Darstellungen nennt sie passende Brüche.");
+                $("#M3").val("Die Schülerin stellt bisweilen recht sicher Bruchteile handelnd her, zeichnet diese in verschiedenen Flächenformen und markiert sie am Zahlenstrahl. Zu verschiedenartigen Darstellungen nennt sie noch etwas unsicher passende Brüche.");
+                $("#M4").val("Die Schülerin stellt unsicher Bruchteile handelnd her, zeichnet diese in verschiedenen Flächenformen und markiert sie am Zahlenstrahl. Es fällt ihr schwer, zu verschiedenartigen Darstellungen passende Brüche zu finden.");
+            });
+            
+            $('#bM6112').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6112').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin beschreibt Anteile, Operatoren, Divisionen sowie Maßzahlen in Verbindung mit Größen durch positive rationale Zahlen sehr sicher.");
+                $("#M2").val("Die Schülerin beschreibt Anteile (Teil vom Ganzen, Teil von mehreren Ganzen), Operatoren, Divisionen sowie Maßzahlen in Verbindung mit Größen durch positive rationale Zahlen.");
+                $("#M3").val("Die Schülerin beschreibt Anteile (Teil vom Ganzen, Teil von mehreren Ganzen), Operatoren, Divisionen sowie Maßzahlen in Verbindung mit Größen durch positive rationale Zahlen recht unsicher.");
+                $("#M4").val("Die Schülerin beschreibt Anteile (Teil vom Ganzen, Teil von mehreren Ganzen), Operatoren, Divisionen sowie Maßzahlen in Verbindung mit Größen durch positive rationale Zahlen sehr unsicher.");
+            });
+            
+            $('#bM6113').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6113').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin benutzt die verschiedenen Aspekte von Bruchzahlen in Situationen aus ihrer Lebenswelt immer fachgerecht.");
+                $("#M2").val("Die Schülerin benutzt die verschiedenen Aspekte von Bruchzahlen in Situationen aus ihrer Lebenswelt fachgerecht.");
+                $("#M3").val("Die Schülerin benutzt die verschiedenen Aspekte von Bruchzahlen in Situationen aus ihrer Lebenswelt meist fachgerecht.");
+                $("#M4").val("Die Schülerin benutzt die verschiedenen Aspekte von Bruchzahlen in Situationen aus ihrer Lebenswelt meist noch nicht fachgerecht.");
+            });
+            
+            $('#bM6114').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6114').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin vergröbert und verfeinert Bruchteile, indem sie diese erweitert und kürzt, um Bruchzahlen gleichnamig und damit auch vergleichbar zu machen sehr sicher. Sie trägt positive rationale Zahlen (echte und gemischte Brüche) an einem vorstrukturierten Zahlenstrahl an, vergleicht und ordnet sie. Dabei begründet die Schülerin sehr überlegt die Größer-Kleiner-Relation.");
+                $("#M2").val("Die Schülerin vergröbert und verfeinert Bruchteile, indem sie diese erweitert und kürzt, um Bruchzahlen gleichnamig und damit auch vergleichbar zu machen schon recht sicher. Sie trägt positive rationale Zahlen (echte und gemischte Brüche) an einem vorstrukturierten Zahlenstrahl an, vergleicht und ordnet sie meist richtig. Dabei begründet die Schülerin die Größer-Kleiner-Relation.");
+                $("#M3").val("Die Schülerin vergröbert und verfeinert Bruchteile, indem sie diese erweitert und kürzt, um Bruchzahlen gleichnamig und damit auch vergleichbar zu machen noch etwas unsicher. Sie trägt positive rationale Zahlen (echte und gemischte Brüche) an einem vorstrukturierten Zahlenstrahl an, vergleicht und ordnet sie meist richtig. Dabei bereitet es der Schülerin bisweilen Probleme, die Größer-Kleiner-Relation zu begründen.");
+                $("#M4").val("Der Schülerin gelingt es nicht, Bruchteile zu vergröbern und zu verfeinern, indem sie diese erweitert und kürzt, um Bruchzahlen gleichnamig und damit auch vergleichbar zu machen. Sie trägt positive rationale Zahlen (echte und gemischte Brüche) an einem vorstrukturierten Zahlenstrahl an, vergleicht und ordnet sie sehr unsicher. Dabei bereitet es der Schülerin Probleme, die Größer-Kleiner-Relation zu begründen.");
+            });
+            
+            $('#bM6115').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6115').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin stellt sicher Brüche mit Zehnerpotenzen im Nenner als Dezimalbrüche dar und umgekehrt, indem sie das nach rechts auf Tausendstel erweiterte Stellenwertsystem nutzt. Sie kennzeichnet und vergleicht Dezimalbrüche am Zahlenstrahl und überprüft die Größer-Kleiner-Relation anhand der Nachkommastellen problemlos.");
+                $("#M2").val("Die Schülerin stellt Brüche mit Zehnerpotenzen im Nenner als Dezimalbrüche dar und umgekehrt, indem sie das nach rechts auf Tausendstel erweiterte Stellenwertsystem nutzt. Sie kennzeichnet und vergleicht Dezimalbrüche am Zahlenstrahl und überprüft die Größer-Kleiner-Relation anhand der Nachkommastellen meist ohne Probleme.");
+                $("#M3").val("Die Schülerin stellt zunehmend sicherer Brüche mit Zehnerpotenzen im Nenner als Dezimalbrüche dar und umgekehrt, indem sie das nach rechts auf Tausendstel erweiterte Stellenwertsystem nutzt. Sie kennzeichnet und vergleicht Dezimalbrüche am Zahlenstrahl und überprüft die Größer-Kleiner-Relation anhand der Nachkommastellen.");
+                $("#M4").val("Der Schülerin gelingt es nicht, Brüche mit Zehnerpotenzen im Nenner als Dezimalbrüche darzustellen und umgekehrt, indem sie das nach rechts auf Tausendstel erweiterte Stellenwertsystem nutzt. Unter Anleitung kennzeichnet und vergleicht sie Dezimalbrüche am Zahlenstrahl und überprüft die Größer-Kleiner-Relation anhand der Nachkommastellen.");
+            });
+            
+            $('#bM6116').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6116').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin wechselt die Darstellungsformen Bruch, Dezimalbruch und Prozentsatz, indem sie Brüche auf Zehnerpotenzen im Nenner erweitert und ggf. Zähler durch Nenner dividiert, sehr sicher.");
+                $("#M2").val("Die Schülerin wechselt die Darstellungsformen Bruch, Dezimalbruch und Prozentsatz, indem sie Brüche auf Zehnerpotenzen im Nenner erweitert und ggf. Zähler durch Nenner dividiert, recht sicher.");
+                $("#M3").val("Die Schülerin wechselt die Darstellungsformen Bruch, Dezimalbruch und Prozentsatz, indem sie Brüche auf Zehnerpotenzen im Nenner erweitert und ggf. Zähler durch Nenner dividiert, noch unsicher.");
+                $("#M4").val("Die Schülerin wechselt die Darstellungsformen Bruch, Dezimalbruch und Prozentsatz, indem sie Brüche auf Zehnerpotenzen im Nenner erweitert und ggf. Zähler durch Nenner dividiert, sehr unsicher.");
+            });
+            
+            $('#bM6121').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6121').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin addiert, subtrahiert, multipliziert und dividiert schriftlich positive Bruchzahlen und Dezimalbrüche sehr sicher. Beim Rechnen mit diesen Zahlen entscheidet sie überlegt, welche Darstellung (Bruch oder Dezimalzahl) vorteilhaft ist, setzt diese ein, nutzt die Rechengesetze und wendet die Rundungsregeln an.");
+                $("#M2").val("Die Schülerin addiert, subtrahiert, multipliziert und dividiert schriftlich positive Bruchzahlen und Dezimalbrüche recht sicher. Beim Rechnen mit diesen Zahlen entscheidet sie meist überlegt, welche Darstellung (Bruch oder Dezimalzahl) vorteilhaft ist, setzt diese ein, nutzt die Rechengesetze und wendet die Rundungsregeln an.");
+                $("#M3").val("Die Schülerin addiert, subtrahiert, multipliziert und dividiert schriftlich positive Bruchzahlen und Dezimalbrüche bisweilen recht sicher. Beim Rechnen mit diesen Zahlen gelingt es ihr nicht immer zu entscheiden, welche Darstellung (Bruch oder Dezimalzahl) vorteilhaft ist, diese einzusetzen, die Rechengesetze zu nutzen und die Rundungsregeln anzuwenden.");
+                $("#M4").val("Die Schülerin addiert, subtrahiert, multipliziert und dividiert schriftlich positive Bruchzahlen und Dezimalbrüche sehr unsicher. Beim Rechnen mit diesen Zahlen bereitet es ihr Probleme zu entscheiden, welche Darstellung (Bruch oder Dezimalzahl) vorteilhaft ist, diese einzusetzen, die Rechengesetze zu nutzen und die Rundungsregeln anzuwenden.");
+            });
+            
+            $('#bM6122').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6122').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin setzt in Sachaufgaben (z. B. aus dem Schulalltag) die verschiedenen Grundrechenarten auch kombiniert ein. Zu Sachsituationen stellt sie selbst mathematische Fragen und beantwortet diese gut nachvollziehbar. Sie überprüft sicher die gewonnenen Lösungen an der Realsituation und versprachlicht ihren Lösungsweg.");
+                $("#M2").val("Die Schülerin setzt in Sachaufgaben (z. B. aus dem Schulalltag) die verschiedenen Grundrechenarten mitunter auch kombiniert ein. Zu Sachsituationen stellt sie meist selbstständig mathematische Fragen und beantwortet diese nachvollziehbar. Sie überprüft die gewonnenen Lösungen an der Realsituation und versprachlicht ihren Lösungsweg.");
+                $("#M3").val("Die Schülerin setzt in Sachaufgaben (z. B. aus dem Schulalltag) die verschiedenen Grundrechenarten zunehmend kombiniert ein. Zu Sachsituationen stellt sie manchmal selbst mathematische Fragen und beantwortet diese recht nachvollziehbar. Sie überprüft noch nicht sicher die gewonnenen Lösungen an der Realsituation und versprachlicht ihren Lösungsweg.");
+                $("#M4").val("Die Schülerin setzt in Sachaufgaben (z. B. aus dem Schulalltag) die verschiedenen Grundrechenarten noch nicht kombiniert ein. Zu Sachsituationen stellt sie kaum mathematische Fragen und beantwortet diese bisweilen wenig nachvollziehbar. Es bereitet ihr Probleme, die gewonnenen Lösungen an der Realsituation zu überprüfen und ihren Lösungsweg zu versprachlichen.");
+            });
+            
+            $('#bM6211').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6211').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin beschreibt und interpretiert sehr sicher anschauliche Situationen und Modelle aus dem Alltag (z. B. Temperaturen, Kontostände) mit negativen Dezimalbrüchen und gegebenenfalls Bruchzahlen, um den bekannten Zahlenraum Menge der ganzen Zahlen auf Menge der rationalen Zahlen zu erweitern.");
+                $("#M2").val("Die Schülerin beschreibt und interpretiert anschauliche Situationen und Modelle aus dem Alltag (z. B. Temperaturen, Kontostände) mit negativen Dezimalbrüchen und gegebenenfalls Bruchzahlen, um den bekannten Zahlenraum Menge der ganzen Zahlen auf Menge der rationalen Zahlen zu erweitern.");
+                $("#M3").val("Die Schülerin beschreibt und interpretiert noch etwas unsicher anschauliche Situationen und Modelle aus dem Alltag (z. B. Temperaturen, Kontostände) mit negativen Dezimalbrüchen und gegebenenfalls Bruchzahlen, um den bekannten Zahlenraum Menge der ganzen Zahlen auf Menge der rationalen Zahlen zu erweitern.");
+                $("#M4").val("Die Schülerin beschreibt und interpretiert sehr unsicher anschauliche Situationen und Modelle aus dem Alltag (z. B. Temperaturen, Kontostände) mit negativen Dezimalbrüchen und gegebenenfalls Bruchzahlen, um den bekannten Zahlenraum Menge der ganzen Zahlen auf Menge der rationalen Zahlen zu erweitern.");
+            });
+            
+            $('#bM6212').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6212').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin ordnet sehr sicher rationale Zahlen auf der Zahlengeraden, um Größenvergleiche begründet anzustellen.");
+                $("#M2").val("Die Schülerin ordnet rationale Zahlen auf der Zahlengeraden, um Größenvergleiche begründet anzustellen.");
+                $("#M3").val("Die Schülerin ordnet noch etwas unsicher rationale Zahlen auf der Zahlengeraden, um Größenvergleiche begründet anzustellen.");
+                $("#M4").val("Die Schülerin ordnet sehr unsicher rationale Zahlen auf der Zahlengeraden, um Größenvergleiche begründet anzustellen.");
+            });
+            
+            $('#bM6221').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6221').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin stellt Zustandsänderungen (Addition und Subtraktion ganzer und rationaler Zahlen) aus ihrer Lebenswelt als Pfeile nach rechts bzw. links an der Zahlengeraden sicher dar, beschreibt genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M2").val("Die Schülerin stellt Zustandsänderungen (Addition und Subtraktion ganzer und rationaler Zahlen) aus ihrer Lebenswelt als Pfeile nach rechts bzw. links an der Zahlengeraden recht sicher dar, beschreibt schon recht genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M3").val("Die Schülerin stellt Zustandsänderungen (Addition und Subtraktion ganzer und rationaler Zahlen) aus ihrer Lebenswelt als Pfeile nach rechts bzw. links an der Zahlengeraden noch etwas unsicher dar, beschreibt nicht immer genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M4").val("Die Schülerin stellt Zustandsänderungen (Addition und Subtraktion ganzer und rationaler Zahlen) aus ihrer Lebenswelt als Pfeile nach rechts bzw. links an der Zahlengeraden noch unsicher dar, das Beschreiben ihres Vorgehens und das Angeben der Rechnung bereitet ihr Probleme.");
+            });
+            
+            $('#bM6222').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6222').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin stellt die Multiplikation rationaler Zahlen als wiederholte Addition und die Division rationaler Zahlen als Umkehrung der Multiplikation an der Zahlengeraden durch Pfeile sicher dar, beschreibt genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M2").val("Die Schülerin stellt die Multiplikation rationaler Zahlen als wiederholte Addition und die Division rationaler Zahlen als Umkehrung der Multiplikation an der Zahlengeraden durch Pfeile recht sicher dar, beschreibt schon recht genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M3").val("Die Schülerin stellt die Multiplikation rationaler Zahlen als wiederholte Addition und die Division rationaler Zahlen als Umkehrung der Multiplikation an der Zahlengeraden durch Pfeile noch etwas unsicher dar, beschreibt nicht immer genau ihr Vorgehen und gibt die Rechnung an.");
+                $("#M4").val("Die Schülerin stellt die Multiplikation rationaler Zahlen als wiederholte Addition und die Division rationaler Zahlen als Umkehrung der Multiplikation an der Zahlengeraden durch Pfeile noch unsicher dar, das Beschreiben ihres Vorgehens und das Angeben der Rechnung bereitet ihr Probleme.");
+            });
+            
+            $('#bM6223').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6223').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin ordnet Sachsituationen aus ihrer Lebenswelt sowie Rechenrätsel den passenden Grundrechenaufgaben zu und erstellt dazu eigene Rechenaufgaben. Sie formuliert zu gegebenen Rechenaufgaben passende Texte und löst Aufgaben anschaulich, um die rechnerische Operation zu verstehen und den Bezug der Mathematik zu ihrer Lebenswelt zu erkennen.");
+                $("#M2").val("Die Schülerin ordnet Sachsituationen aus ihrer Lebenswelt sowie Rechenrätsel meist den passenden Grundrechenaufgaben zu und erstellt dazu eigene Rechenaufgaben. Sie formuliert zu gegebenen Rechenaufgaben recht passende Texte und löst Aufgaben anschaulich, um die rechnerische Operation zu verstehen und den Bezug der Mathematik zu ihrer Lebenswelt zu erkennen.");
+                $("#M3").val("Die Schülerin ordnet Sachsituationen aus ihrer Lebenswelt sowie Rechenrätsel den passenden Grundrechenaufgaben zu und erstellt dazu eigene Rechenaufgaben. Es fällt ihr bisweilen noch schwer, zu gegebenen Rechenaufgaben passende Texte zu formulieren. Aufgaben anschaulich zu lösen, um die rechnerische Operation zu verstehen und den Bezug der Mathematik zu ihrer Lebenswelt zu erkennen, bereitet ihr mitunter Probleme.");
+                $("#M4").val("Die Schülerin ordnet unter Anleitung Sachsituationen aus ihrer Lebenswelt sowie Rechenrätsel den passenden Grundrechenaufgaben zu. Es fällt ihr schwer, zu gegebenen Rechenaufgaben passende Texte zu formulieren. Aufgaben anschaulich zu lösen, um die rechnerische Operation zu verstehen und den Bezug der Mathematik zu ihrer Lebenswelt zu erkennen, bereitet ihr Probleme. ");
+            });
+            
+            $('#bM6224').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM6224').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin löst sicher einfache Aufgaben zu den Grundrechenarten mit rationalen Zahlen, auch im Kopf.");
+                $("#M2").val("Die Schülerin löst recht sicher einfache Aufgaben zu den Grundrechenarten mit rationalen Zahlen, auch im Kopf.");
+                $("#M3").val("Die Schülerin löst noch etwas unsicher einfache Aufgaben zu den Grundrechenarten mit rationalen Zahlen, zunehmend auch im Kopf.");
+                $("#M4").val("Die Schülerin löst noch nicht sicher einfache Aufgaben zu den Grundrechenarten mit rationalen Zahlen, auch das Lösen im Kopf bereitet ihr Probleme.");
+            });
+            
+            $('#bM631').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM631').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin beschreibt, bestimmt und ordnet unterschiedliche Vierecke (allgemeines Viereck, Trapez, Parallelogramm, Raute, Rechteck, Quadrat, Drachenviereck) in ihrem Lebensraum nach vorgegebenen Kriterien (z. B. Winkel, Achsensymmetrie, parallele Seiten) richtig zu. Sie erläutert präzise die Einordnung und beschreibt spezielle Vierecke als Sonderformen anderer Vierecke (z. B. Rechteck als Sonderform des Parallelogramms).");
+                $("#M2").val("Die Schülerin beschreibt, bestimmt und ordnet unterschiedliche Vierecke (allgemeines Viereck, Trapez, Parallelogramm, Raute, Rechteck, Quadrat, Drachenviereck) in ihrem Lebensraum nach vorgegebenen Kriterien (z. B. Winkel, Achsensymmetrie, parallele Seiten) meist richtig zu. Sie erläutert zunehmend präzise die Einordnung und beschreibt spezielle Vierecke als Sonderformen anderer Vierecke (z. B. Rechteck als Sonderform des Parallelogramms).");
+                $("#M3").val("Die Schülerin beschreibt, bestimmt und ordnet unterschiedliche Vierecke (allgemeines Viereck, Trapez, Parallelogramm, Raute, Rechteck, Quadrat, Drachenviereck) in ihrem Lebensraum nach vorgegebenen Kriterien (z. B. Winkel, Achsensymmetrie, parallele Seiten) noch nicht immer richtig zu. Sie erläutert recht unpräzise die Einordnung und beschreibt spezielle Vierecke als Sonderformen anderer Vierecke (z. B. Rechteck als Sonderform des Parallelogramms).");
+                $("#M4").val("Die Schülerin beschreibt, bestimmt und ordnet unterschiedliche Vierecke (allgemeines Viereck, Trapez, Parallelogramm, Raute, Rechteck, Quadrat, Drachenviereck) in ihrem Lebensraum nach vorgegebenen Kriterien (z. B. Winkel, Achsensymmetrie, parallele Seiten) oft nicht richtig zu. Die präzise Einordnung und Beschreibung spezieller Vierecke als Sonderformen anderer Vierecke (z. B. Rechteck als Sonderform des Parallelogramms) fällt ihr schwer.");
+            });
+            
+            $('#bM632').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM632').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin zeichnet Parallelogramme, Rechtecke, Quadrate und Kreise sachgerecht mit mathematischen Werkzeugen. Sie beschriftet und beschreibt diese Figuren sicher mit Fachbegriffen.");
+                $("#M2").val("Die Schülerin zeichnet Parallelogramme, Rechtecke, Quadrate und Kreise meist sachgerecht mit mathematischen Werkzeugen. Sie beschriftet und beschreibt diese Figuren recht sicher mit Fachbegriffen.");
+                $("#M3").val("Die Schülerin zeichnet Parallelogramme, Rechtecke, Quadrate und Kreise noch nicht immer sachgerecht mit mathematischen Werkzeugen. Sie beschriftet und beschreibt diese Figuren noch nicht sicher mit Fachbegriffen.");
+                $("#M4").val("Die Schülerin zeichnet Parallelogramme, Rechtecke, Quadrate und Kreise oft nicht sachgerecht mit mathematischen Werkzeugen. Sie beschriftet und beschreibt diese Figuren sehr unsicher mit Fachbegriffen.");
+            });
+            
+            $('#bM633').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM633').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin zeichnet Punkte und Figuren in erweiterte Koordinatensysteme (I. – IV. Quadrant) und liest darin sehr sicher Koordinaten von Punkten ab, um sich in der Ebene zu orientieren.");
+                $("#M2").val("Die Schülerin zeichnet Punkte und Figuren in erweiterte Koordinatensysteme (I. – IV. Quadrant) und liest darin recht sicher Koordinaten von Punkten ab, um sich in der Ebene zu orientieren.");
+                $("#M3").val("Die Schülerin zeichnet meist präzise Punkte und Figuren in erweiterte Koordinatensysteme (I. – IV. Quadrant) und liest darin bisweilen recht sicher Koordinaten von Punkten ab, um sich in der Ebene zu orientieren.");
+                $("#M4").val("Die Schülerin zeichnet recht unpräzise Punkte und Figuren in erweiterte Koordinatensysteme (I. – IV. Quadrant). Koordinaten von Punkten abzulesen, um sich in der Ebene zu orientieren, bereitet ihr Probleme.");
+            });
+            
+            $('#bM634').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM634').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin benennt und identifiziert sicher Körper (Würfel, Quader, Prisma, Zylinder, Pyramide, Kegel, Kugel) in ihrer Umwelt. Diese nach geometrischen Kriterien zu unterscheiden und Fachbegriffe wie: Seitenfläche, Kante, Ecke, Seite, Diagonale, Strecke, rechter Winkel, senkrecht, parallel, Radius zu verwenden bereitet ihr keine Probleme. Sie kann einen Würfel als Sonderform eines Quaders beschreiben.");
+                $("#M2").val("Die Schülerin benennt und identifiziert recht sicher Körper (Würfel, Quader, Prisma, Zylinder, Pyramide, Kegel, Kugel) in ihrer Umwelt. Diese nach geometrischen Kriterien zu unterscheiden und Fachbegriffe wie: Seitenfläche, Kante, Ecke, Seite, Diagonale, Strecke, rechter Winkel, senkrecht, parallel, Radius zu verwenden bereitet ihr wenig Probleme. Sie kann einen Würfel recht genau als Sonderform eines Quaders beschreiben.");
+                $("#M3").val("Die Schülerin benennt und identifiziert noch etwas unsicher Körper (Würfel, Quader, Prisma, Zylinder, Pyramide, Kegel, Kugel) in ihrer Umwelt. Diese nach geometrischen Kriterien zu unterscheiden und Fachbegriffe wie: Seitenfläche, Kante, Ecke, Seite, Diagonale, Strecke, rechter Winkel, senkrecht, parallel, Radius zu verwenden bereitet ihr bisweilen Probleme. Sie kann einen Würfel noch nicht genau als Sonderform eines Quaders beschreiben.");
+                $("#M4").val("Die Schülerin benennt und identifiziert noch nicht sicher Körper (Würfel, Quader, Prisma, Zylinder, Pyramide, Kegel, Kugel) in ihrer Umwelt. Diese nach geometrischen Kriterien zu unterscheiden und Fachbegriffe wie: Seitenfläche, Kante, Ecke, Seite, Diagonale, Strecke, rechter Winkel, senkrecht, parallel, Radius zu verwenden bereitet ihr Probleme. Sie kann einen Würfel noch nicht als Sonderform eines Quaders beschreiben.");
+            });
+            
+            $('#bM635').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM635').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin zeichnet Würfel und Quader als Netze und Schrägbildskizzen, wechselt zwischen diesen Darstellungsformen und erkennt sowie erläutert mögliche fehlerhafte Darstellungen.");
+                $("#M2").val("Die Schülerin zeichnet Würfel und Quader als Netze und Schrägbildskizzen, wechselt recht sicher zwischen diesen Darstellungsformen und erkennt sowie erläutert meist mögliche fehlerhafte Darstellungen.");
+                $("#M3").val("Die Schülerin zeichnet noch unsicher Würfel und Quader als Netze und Schrägbildskizzen, das Wechseln zwischen diesen Darstellungsformen und das Erkennen und Erläutern möglicher fehlerhafter Darstellungen bereitet mitunter Probleme.");
+                $("#M4").val("Die Schülerin zeichnet unsicher Würfel und Quader als Netze und Schrägbildskizzen, das Wechseln zwischen diesen Darstellungsformen und das Erkennen und Erläutern möglicher fehlerhafter Darstellungen bereitet Probleme.");
+            });
+            
+            $('#bM641').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM641').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin berechnet Oberflächeninhalte von Quadern und Würfeln auch in Sachsituationen, indem sie sicher mithilfe von Netzen oder Schrägbildskizzen den jeweiligen Oberflächeninhalt als Summe aller Inhalte der Teilfiguren deutlich macht.");
+                $("#M2").val("Die Schülerin berechnet Oberflächeninhalte von Quadern und Würfeln bisweilen auch in Sachsituationen, indem sie recht sicher mithilfe von Netzen oder Schrägbildskizzen den jeweiligen Oberflächeninhalt als Summe aller Inhalte der Teilfiguren deutlich macht.");
+                $("#M3").val("Die Schülerin berechnet zunehmend ohne Unterstützung Oberflächeninhalte von Quadern und Würfeln auch in Sachsituationen, indem sie noch unsicher mithilfe von Netzen oder Schrägbildskizzen den jeweiligen Oberflächeninhalt als Summe aller Inhalte der Teilfiguren deutlich macht.");
+                $("#M4").val("Die Schülerin berechnet unter Anleitung Oberflächeninhalte von Quadern und Würfeln auch in Sachsituationen, indem sie mit Unterstützung mithilfe von Netzen oder Schrägbildskizzen den jeweiligen Oberflächeninhalt als Summe aller Inhalte der Teilfiguren deutlich macht.");
+            });
+            
+            $('#bM642').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM642').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin berechnet sicher Oberflächeninhalte von aus Quadern und Würfeln zusammengesetzten Körpern.");
+                $("#M2").val("Die Schülerin berechnet recht sicher Oberflächeninhalte von aus Quadern und Würfeln zusammengesetzten Körpern.");
+                $("#M3").val("Die Schülerin berechnet zunehmend sicherer Oberflächeninhalte von aus Quadern und Würfeln zusammengesetzten Körpern.");
+                $("#M4").val("Die Schülerin berechnet noch unsicher Oberflächeninhalte von aus Quadern und Würfeln zusammengesetzten Körpern.");
+            });
+            
+            $('#bM651').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM651').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin baut präzise Würfelbauten nach Schrägbildern oder Ansichten (Seitenansicht, Vorderansicht, Ansicht von oben) und löst im Kopf Aufgaben mit Körpern, die aus Einheitswürfeln bestehen, um ihre Raumvorstellung zu schulen.");
+                $("#M2").val("Die Schülerin baut recht präzise Würfelbauten nach Schrägbildern oder Ansichten (Seitenansicht, Vorderansicht, Ansicht von oben) und löst meist im Kopf Aufgaben mit Körpern, die aus Einheitswürfeln bestehen, um ihre Raumvorstellung zu schulen.");
+                $("#M3").val("Die Schülerin baut noch nicht präzise Würfelbauten nach Schrägbildern oder Ansichten (Seitenansicht, Vorderansicht, Ansicht von oben) und löst zunehmend im Kopf Aufgaben mit Körpern, die aus Einheitswürfeln bestehen, um ihre Raumvorstellung zu schulen.");
+                $("#M4").val("Die Schülerin baut sehr unpräzise Würfelbauten nach Schrägbildern oder Ansichten (Seitenansicht, Vorderansicht, Ansicht von oben) und löst noch keine im Kopf Aufgaben mit Körpern, die aus Einheitswürfeln bestehen, um ihre Raumvorstellung zu schulen.");
+            });
+            
+            $('#bM652').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM652').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin vergleicht, misst und schätzt Rauminhalte von Würfeln und Quadern, indem sie verschiedene Problemlösestrategien (z. B. Umschütten, Auslegen mit Einheitswürfeln) durchführt. Dabei verwendet sie den Begriff Volumen sicher.");
+                $("#M2").val("Die Schülerin vergleicht, misst und schätzt Rauminhalte von Würfeln und Quadern, indem sie verschiedene Problemlösestrategien (z. B. Umschütten, Auslegen mit Einheitswürfeln) durchführt. Dabei verwendet sie den Begriff Volumen recht sicher.");
+                $("#M3").val("Der Schülerin bereitet es zunehmend weniger Probleme, Rauminhalte von Würfeln und Quadern zu vergleichen, messen und zu schätzen, indem sie verschiedene Problemlösestrategien (z. B. Umschütten, Auslegen mit Einheitswürfeln) durchführt. Dabei verwendet sie den Begriff Volumen zunehmend sicherer.");
+                $("#M4").val("Der Schülerin bereitet es Probleme, Rauminhalte von Würfeln und Quadern zu vergleichen, messen und zu schätzen, indem sie verschiedene Problemlösestrategien (z. B. Umschütten, Auslegen mit Einheitswürfeln) durchführt. Dabei verwendet sie den Begriff Volumen noch unsicher.");
+            });
+            
+            $('#bM653').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM653').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin begründet die Rauminhaltsberechnung von Würfeln und Quadern sicher dadurch, dass sie diese selbstständig mit Einheitswürfeln auslegt und die Abhängigkeit des Rauminhalts von Länge, Breite und Höhe des jeweiligen Quaders aufzeigt.");
+                $("#M2").val("Die Schülerin begründet die Rauminhaltsberechnung von Würfeln und Quadern recht sicher dadurch, dass sie diese meist selbstständig mit Einheitswürfeln auslegt und die Abhängigkeit des Rauminhalts von Länge, Breite und Höhe des jeweiligen Quaders aufzeigt.");
+                $("#M3").val("Die Schülerin begründet die Rauminhaltsberechnung von Würfeln und Quadern noch recht unsicher dadurch, dass sie diese zunehmend selbstständig mit Einheitswürfeln auslegt und die Abhängigkeit des Rauminhalts von Länge, Breite und Höhe des jeweiligen Quaders aufzeigt.");
+                $("#M4").val("Die Schülerin begründet die Rauminhaltsberechnung von Würfeln und Quadern noch unsicher dadurch, dass sie diese mit Unterstützung mit Einheitswürfeln auslegt und die Abhängigkeit des Rauminhalts von Länge, Breite und Höhe des jeweiligen Quaders aufzeigt.");
+            });
+            
+            $('#bM654').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM654').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin beschreibt auf der Grundlage ihres guten Verständnisses des Prinzips der Volumenberechnung das Würfelvolumen (VW = a • a • a; VW = a³) und entsprechende Maßeinheiten als Potenzen (m³, dm³, cm³, mm³) und erläutert ohne Probleme an Beispielen Zusammenhänge zwischen diesen Maßeinheiten sowie zu ml und l.");
+                $("#M2").val("Die Schülerin beschreibt auf der Grundlage ihres recht guten Verständnisses des Prinzips der Volumenberechnung das Würfelvolumen (VW = a • a • a; VW = a³) und entsprechende Maßeinheiten als Potenzen (m³, dm³, cm³, mm³) und erläutert meist ohne Probleme an Beispielen Zusammenhänge zwischen diesen Maßeinheiten sowie zu ml und l.");
+                $("#M3").val("Die Schülerin beschreibt auf der Grundlage ihres zunehmend besseren Verständnisses des Prinzips der Volumenberechnung das Würfelvolumen (VW = a • a • a; VW = a³) und entsprechende Maßeinheiten als Potenzen (m³, dm³, cm³, mm³) und erläutert bisweilen mit Problemen an Beispielen Zusammenhänge zwischen diesen Maßeinheiten sowie zu ml und l.");
+                $("#M4").val("Die Schülerin beschreibt auf der Grundlage ihres noch nicht guten Verständnisses des Prinzips der Volumenberechnung das Würfelvolumen (VW = a • a • a; VW = a³) und entsprechende Maßeinheiten als Potenzen (m³, dm³, cm³, mm³) unsicher und erläutert mit Problemen an Beispielen Zusammenhänge zwischen diesen Maßeinheiten sowie zu ml und l.");
+            });
+            
+            $('#bM655').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM655').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin berechnet Volumina von Quadern, Würfeln oder daraus zusammengesetzten Körpern sicher und löst selbstständig alltagsbezogene Sachaufgaben. Sie wandelt Volumeneinheiten bei Bedarf in benachbarte Einheiten um und wählt diese situationsgerecht aus.");
+                $("#M2").val("Die Schülerin berechnet Volumina von Quadern, Würfeln oder daraus zusammengesetzten Körpern recht sicher und löst alltagsbezogene Sachaufgaben. Sie wandelt Volumeneinheiten bei Bedarf in benachbarte Einheiten um und wählt diese meist situationsgerecht aus.");
+                $("#M3").val("Die Schülerin berechnet Volumina von Quadern, Würfeln oder daraus zusammengesetzten Körpern noch nicht immer sicher und löst zunehmend selbstständiger alltagsbezogene Sachaufgaben. Es fällt ihr bisweilen schwer, Volumeneinheiten bei Bedarf in benachbarte Einheiten umzuwandeln und situationsgerecht auszuwählen.");
+                $("#M4").val("Die Schülerin berechnet Volumina von Quadern, Würfeln oder daraus zusammengesetzten Körpern und löst alltagsbezogene Sachaufgaben. Es fällt ihr schwer, Volumeneinheiten bei Bedarf in benachbarte Einheiten umzuwandeln und situationsgerecht auszuwählen.");
+            });
+            
+            $('#bM671').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM671').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin entnimmt, ordnet und vergleicht sicher Daten aus verschiedenen Quellen (z. B. Texte, Schaubilder, Tabellen), um Datendarstellungen kritisch zu betrachten, und schließt richtig auf weitere Aussagen von Diagrammen, die nicht direkt dargestellt werden (z. B. Zunahme, Verlust).");
+                $("#M2").val("Die Schülerin entnimmt, ordnet und vergleicht recht sicher Daten aus verschiedenen Quellen (z. B. Texte, Schaubilder, Tabellen), um Datendarstellungen kritisch zu betrachten, und schließt meist richtig auf weitere Aussagen von Diagrammen, die nicht direkt dargestellt werden (z. B. Zunahme, Verlust).");
+                $("#M3").val("Die Schülerin entnimmt, ordnet und vergleicht zunehmend sicherer Daten aus verschiedenen Quellen (z. B. Texte, Schaubilder, Tabellen), um Datendarstellungen kritisch zu betrachten, und schließt noch nicht immer richtig auf weitere Aussagen von Diagrammen, die nicht direkt dargestellt werden (z. B. Zunahme, Verlust).");
+                $("#M4").val("Die Schülerin entnimmt, ordnet und vergleicht recht unsicher Daten aus verschiedenen Quellen (z. B. Texte, Schaubilder, Tabellen), um Datendarstellungen kritisch zu betrachten, und schließt oft nicht richtig auf weitere Aussagen von Diagrammen, die nicht direkt dargestellt werden (z. B. Zunahme, Verlust).");
+            });
+            
+            $('#bM672').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM672').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin stellt Daten auf verschiedene Arten situations- und adressatengerecht (z. B. in Tabellen, Diagrammen) dar und präsentiert sie überlegt.");
+                $("#M2").val("Die Schülerin stellt Daten auf verschiedene Arten situations- und adressatengerecht (z. B. in Tabellen, Diagrammen) dar und präsentiert sie meist überlegt.");
+                $("#M3").val("Der Schülerin fällt es zunehmend leichter, Daten auf verschiedene Arten situations- und adressatengerecht (z.B. in Tabellen, Diagrammen) darzustellen und sie überlegt zu präsentieren.");
+                $("#M4").val("Der Schülerin fällt es schwer, Daten auf verschiedene Arten situations- und adressatengerecht (z.B. in Tabellen, Diagrammen) darzustellen und sie überlegt zu präsentieren.");
+            });
+            
+            $('#bM673').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM673').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin bestimmt sicher aus Daten ihrer Lebenswelt (z. B. Körpergröße, Alter, Temperatur) das arithmetische Mittel als Durchschnittswert und reflektiert selbstständig im Sachzusammenhang dessen Bedeutung und Aussagekraft.");
+                $("#M2").val("Die Schülerin bestimmt recht sicher aus Daten ihrer Lebenswelt (z. B. Körpergröße, Alter, Temperatur) das arithmetische Mittel als Durchschnittswert und reflektiert meist selbstständig im Sachzusammenhang dessen Bedeutung und Aussagekraft.");
+                $("#M3").val("Die Schülerin bestimmt noch nicht immer sicher aus Daten ihrer Lebenswelt (z. B. Körpergröße, Alter, Temperatur) das arithmetische Mittel als Durchschnittswert und reflektiert zunehmend selbstständiger im Sachzusammenhang dessen Bedeutung und Aussagekraft.");
+                $("#M4").val("Die Schülerin bestimmt noch unsicher aus Daten ihrer Lebenswelt (z. B. Körpergröße, Alter, Temperatur) das arithmetische Mittel als Durchschnittswert und reflektiert unter Anleitung im Sachzusammenhang dessen Bedeutung und Aussagekraft.");
+            });
+            
+            $('#bM681').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM681').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin löst Zahlenrätsel und Aufgaben zum Themenkomplex Volumen von Quadern sicher durch systematisches Probieren und Durchführen von Umkehraufgaben, um ihr Verständnis für Variablen und Gleichungen zu vertiefen.");
+                $("#M2").val("Die Schülerin löst Zahlenrätsel und Aufgaben zum Themenkomplex Volumen von Quadern recht sicher durch oft systematisches Probieren und Durchführen von Umkehraufgaben, um ihr Verständnis für Variablen und Gleichungen zu vertiefen.");
+                $("#M3").val("Der Schülerin gelingt es noch nicht immer, Zahlenrätsel und Aufgaben zum Themenkomplex Volumen von Quadern durch systematisches Probieren und Durchführen von Umkehraufgaben zu lösen, um ihr Verständnis für Variablen und Gleichungen zu vertiefen.");
+                $("#M4").val("Der Schülerin bereitet es Probleme, Zahlenrätsel und Aufgaben zum Themenkomplex Volumen von Quadern durch systematisches Probieren und Durchführen von Umkehraufgaben zu lösen, um ihr Verständnis für Variablen und Gleichungen zu vertiefen.");
+            });
+            
+            
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Seite oben -->
+    <div class="flex-container" id="buttonIndex">
+        <a href="index.html">Startseite</a>
+        <a href="6Schueler.html">Schüler</a>
+    </div>
+    <div id="Titel">
+        <h1><img src="media/notebook2.svg" width=50px;> 6. Klasse Schülerin</h1>
+    </div>
+    <div class="flex-container" id="bodie">
+        <div id="auswahl">
+            
+            
+<!-- Auswahl -->
+            
+            <button class="fach" id="deutsch">D6 Deutsch</button><br>
+                    <div id="aufdeutsch">
+                        <button class="ebene1" id="lernbereich1">D6 Lernbereich 1: Sprechen und Zuhören</button><br>
+                        <div id="auflernbereich1">
+                            <button class="ebene2" id="verstehendzuhören">D6 1.1 Verstehend zuhören</button><br>
+                            <div id="aufverstehendzuhören">
+                                <div class="kompetenz">
+                                    <button class="k" id="bD6111">...wenden in Zuhörsituationen ihre Aufmerksamkeit bewusst auf das Gesagte, geben Rückmeldung und fassen in eigenen Worten zusammen.
+</button><br>
+                                    <button class="k" id="bD6112">...formulieren zu gesprochenen Texten einfache Verständnisfragen.
+</button><br>
+                                    <button class="k"  id="bD6113">...folgen Inhalten aus Hörmedien (z. B. Detektivgeschichten) aktiv und werten das Gehörte zusammenfassend aus.
+</button>
+                                </div></div></div></div>
+            
+            <button class="fach" id="mathe">M6 Mathematik</button><br>
+                    <div id="aufmathe">
+                        <button class="ebene1" id="bruchzahlen">M6 Lernbereich 1: Bruchzahlen</button>
+                        <div id="aufbruchzahlen">
+                            <button class="ebene2" id="erweiterungbruch">M6 1.1 Erweiterung des Zahlbereichs auf Bruchzahlen</button>
+                            <div id="auferweiterungbruch">
+                                <div class="kompetenz">
+                                    <button class="k"  id="bM6111">...stellen Bruchteile handelnd her, zeichnen diese in verschiedenen Flächenformen und markieren sie am Zahlenstrahl. Zu verschiedenartigen Darstellungen nennen sie passende Brüche.</button><br>
+                                    <button class="k"  id="bM6112">...beschreiben Anteile (Teil vom Ganzen, Teil von mehreren Ganzen), Operatoren, Divisionen sowie Maßzahlen in Verbindung mit Größen durch positive rationale Zahlen.</button><br>
+                                    <button class="k"  id="bM6113">...benutzen die verschiedenen Aspekte von Bruchzahlen in Situationen aus ihrer Lebenswelt fachgerecht.</button><br>
+                                    <button class="k"  id="bM6114">...vergröbern und verfeinern Bruchteile, indem sie diese erweitern und kürzen, um Bruchzahlen gleichnamig und damit auch vergleichbar zu machen. Sie tragen positive rationale Zahlen (echte und gemischte Brüche) an einem vorstrukturierten Zahlenstrahl an, vergleichen und ordnen sie. Dabei begründen sie die Größer-Kleiner-Relation.</button><br>
+                                    <button class="k"  id="bM6115">...stellen Brüche mit Zehnerpotenzen im Nenner als Dezimalbrüche dar und umgekehrt, indem sie das nach rechts auf Tausendstel erweiterte Stellenwertsystem nutzen. Sie kennzeichnen und vergleichen Dezimalbrüche am Zahlenstrahl und überprüfen die Größer-Kleiner-Relation anhand der Nachkommastellen.</button><br>
+                                    <button class="k"  id="bM6116">...wechseln die Darstellungsformen Bruch, Dezimalbruch und Prozentsatz, indem sie Brüche auf Zehnerpotenzen im Nenner erweitern und ggf. Zähler durch Nenner dividieren.</button><br>
+                                    </div></div>
+                        <button class="ebene2" id="rechnenbruch">M6 1.2 Rechnen mit Bruchzahlen</button>
+                                <div id="aufrechnenbruch">
+                                    <div class="kompetenz">
+                                        <button class="k"  id="bM6121">...addieren, subtrahieren, multiplizieren und dividieren schriftlich positive Bruchzahlen (a + b; a – b; a • b mit a, b ∈ Formelzeichen Q Plus. Menge der positiven rationalen Zahlen. und a : b mit a ∈ Formelzeichen Q Plus. Menge der positiven rationalen Zahlen., b ∈ Formelzeichen N. Menge der natürlichen Zahlen.) und Dezimalbrüche. Beim Rechnen mit diesen Zahlen entscheiden sie, welche Darstellung (Bruch oder Dezimalzahl) vorteilhaft ist, setzen diese ein, nutzen die Rechengesetze (Punkt-vor-Strich-Rechnung, Assoziativ- und Kommutativgesetz, Rechnen mit Klammern) und wenden die Rundungsregeln an.</button><br>
+                                        <button class="k"  id="bM6122">...setzen in Sachaufgaben (z. B. aus dem Schulalltag) die verschiedenen Grundrechenarten auch kombiniert ein. Zu Sachsituationen stellen sie selbst mathematische Fragen und beantworten diese nachvollziehbar. Sie überprüfen die gewonnenen Lösungen an der Realsituation und versprachlichen ihren Lösungsweg.</button><br>
+                                    </div></div></div><br>
+                        <button class="ebene1" id="rationale">M6 Lernbereich 2: Rationale Zahlen</button>
+                        <div id="aufrationale">
+                            <button class="ebene2" id="erweiterungrat">M6 2.1 Erweiterung des Zahlbereichs auf rationale Zahlen</button>
+                            <div id="auferweiterungrat">
+                                    <div class="kompetenz">
+                                        <button class="k"  id="bM6211">...beschreiben und interpretieren anschauliche Situationen und Modelle aus dem Alltag (z. B. Temperaturen, Kontostände) mit negativen Dezimalbrüchen und ggf. Bruchzahlen, um den bekannten Zahlenraum Formelzeichen Z. Menge der ganzen Zahlen. auf Formelzeichen Q. Menge der rationalen Zahlen. zu erweitern.</button><br>
+                                        <button class="k"  id="bM6212">...ordnen rationale Zahlen auf der Zahlengeraden, um Größenvergleiche begründet anzustellen.</button><br>
+                                    </div></div>
+                            <button class="ebene2" id="rechnenrat">M6 2.2 Grundrechenarten im Bereich der rationalen Zahlen</button>
+                            <div id="aufrechnenrat">
+                                    <div class="kompetenz">
+                                        <button class="k"  id="bM6221">...stellen Zustandsänderungen (Addition und Subtraktion ganzer und rationaler Zahlen) aus ihrer Lebenswelt als Pfeile nach rechts bzw. links an der Zahlengeraden dar, beschreiben ihr Vorgehen und geben die Rechnung an.</button><br>
+                                        <button class="k"  id="bM6222">...stellen die Multiplikation rationaler Zahlen als wiederholte Addition und die Division rationaler Zahlen als Umkehrung der Multiplikation an der Zahlengeraden durch Pfeile dar, beschreiben ihr Vorgehen und geben die Rechnung an.</button><br>
+                                        <button class="k"  id="bM6223">...ordnen Sachsituationen aus ihrer Lebenswelt sowie Rechenrätsel den passenden Grundrechenaufgaben zu und erstellen dazu eigene Rechenaufgaben. Sie formulieren zu gegebenen Rechenaufgaben passende Texte und lösen Aufgaben anschaulich, um die rechnerische Operation zu verstehen und den Bezug der Mathematik zu ihrer Lebenswelt zu erkennen.</button><br>
+                                        <button class="k"  id="bM6224">...lösen einfache Aufgaben zu den Grundrechenarten mit rationalen Zahlen, auch im Kopf.</button><br>
+                                    </div></div></div><br>
+                        <button class="ebene1" id="geometrisch">M6 Lernbereich 3: Geometrische Figuren, Körper und Lagebeziehungen</button>
+                        <div id="aufgeometrisch">
+                            <div class="kompetenz">
+                                <button class="k"  id="bM631">...beschreiben, bestimmen und ordnen unterschiedliche Vierecke (allgemeines Viereck, Trapez, Parallelogramm, Raute, Rechteck, Quadrat, Drachenviereck) in ihrem Lebensraum nach vorgegebenen Kriterien (z. B. Winkel, Achsensymmetrie, parallele Seiten). Sie erläutern die Einordnung und beschreiben spezielle Vierecke als Sonderformen anderer Vierecke (z. B. Rechteck als Sonderform des Parallelogramms).</button><br>
+                                <button class="k"  id="bM632">...zeichnen Parallelogramme, Rechtecke, Quadrate und Kreise sachgerecht mit mathematischen Werkzeugen. Sie beschriften und beschreiben diese Figuren mit Fachbegriffen (Eckpunkte, Seiten, Winkel, Kreislinie, Mittelpunkt, Radius, Durchmesser).
+</button><br>
+                                <button class="k"  id="bM633">...zeichnen Punkte und Figuren in erweiterte Koordinatensysteme (I. – IV. Quadrant) und lesen darin Koordinaten von Punkten ab, um sich in der Ebene zu orientieren.
+</button><br>
+                                <button class="k"  id="bM634">...benennen und identifizieren Körper (Würfel, Quader, Prisma, Zylinder, Pyramide, Kegel, Kugel) in ihrer Umwelt. Sie unterscheiden diese nach geometrischen Kriterien und verwenden dabei Fachbegriffe: Seitenfläche, Kante, Ecke, Seite, Diagonale, Strecke, rechter Winkel, senkrecht, parallel, Radius. Sie beschreiben einen Würfel als Sonderform eines Quaders.
+</button><br>
+                                <button class="k"  id="bM635">...zeichnen Würfel und Quader als Netze und Schrägbildskizzen, wechseln zwischen diesen Darstellungsformen und erkennen sowie erläutern mögliche fehlerhafte Darstellungen.
+</button><br>
+                            </div></div><br>
+                        <button class="ebene1" id="flaecheninhalt">M6 Lernbereich 4: Flächeninhalt- Oberflächeninhalt von Quadern</button>
+                        <div id="aufflaecheninhalt">
+                        <div class="kompetenz">
+                            <button class="k"  id="bM641">...berechnen Oberflächeninhalte von Quadern und Würfeln auch in Sachsituationen, indem sie mithilfe von Netzen oder Schrägbildskizzen den jeweiligen Oberflächeninhalt als Summe aller Inhalte der Teilfiguren deutlich machen.
+</button><br>
+                            <button class="k"  id="bM642">...berechnen Oberflächeninhalte von aus Quadern und Würfeln zusammengesetzten Körpern.
+</button><br>
+                        </div>
+                        </div><br>
+                        <button class="ebene1" id="rauminhalt">M6 Lernbereich 5: Rauminhalt- Quader</button>
+                        <div id="aufrauminhalt">
+                        <div class="kompetenz">
+                            <button class="k"  id="bM651">...bauen Würfelbauten nach Schrägbildern oder Ansichten (Seitenansicht, Vorderansicht, Ansicht von oben) und lösen im Kopf Aufgaben mit Körpern, die aus Einheitswürfeln bestehen, um ihre Raumvorstellung zu schulen.
+</button><br>
+                            <button class="k"  id="bM652">...vergleichen, messen und schätzen Rauminhalte von Würfeln und Quadern, indem sie verschiedene Problemlösestrategien (z. B. Umschütten, Auslegen mit Einheitswürfeln) durchführen. Dabei verwenden sie den Begriff Volumen sicher.
+</button><br>
+                            <button class="k"  id="bM653">...begründen die Rauminhaltsberechnung von Würfeln und Quadern dadurch, dass sie diese mit Einheitswürfeln auslegen und die Abhängigkeit des Rauminhalts von Länge, Breite und Höhe des jeweiligen Quaders aufzeigen.
+</button><br>
+                            <button class="k"  id="bM654">...beschreiben auf der Grundlage ihres Verständnisses des Prinzips der Volumenberechnung das Würfelvolumen (VW = a • a • a; VW = a³) und entsprechende Maßeinheiten als Potenzen (m³, dm³, cm³, mm³) und erläutern an Beispielen Zusammenhänge zwischen diesen Maßeinheiten sowie zu ml und l.
+</button><br>
+                            <button class="k"  id="bM655">...berechnen Volumina von Quadern, Würfeln oder daraus zusammengesetzten Körpern und lösen alltagsbezogene Sachaufgaben. Sie wandeln Volumeneinheiten bei Bedarf in benachbarte Einheiten um und wählen diese situationsgerecht aus.
+</button><br>
+                        </div>
+                        </div><br>
+                        <button class="ebene1" id="daten">M6 Lernbereich 6: Daten</button>
+                        <div id="aufdaten">
+                        <div class="kompetenz">
+                            <button class="k"  id="bM671">...entnehmen, ordnen und vergleichen Daten aus verschiedenen Quellen (z. B. Texte, Schaubilder, Tabellen), um Datendarstellungen kritisch zu betrachten, und schließen auf weitere Aussagen von Diagrammen, die nicht direkt dargestellt werden (z. B. Zunahme, Verlust).
+</button><br>
+                            <button class="k"  id="bM672">...stellen Daten auf verschiedene Arten situations- und adressatengerecht (z. B. in Tabellen, Diagrammen) dar und präsentieren sie.
+</button><br>
+                            <button class="k"  id="bM673">...bestimmen aus Daten ihrer Lebenswelt (z. B. Körpergröße, Alter, Temperatur) das arithmetische Mittel als Durchschnittswert und reflektieren im Sachzusammenhang dessen Bedeutung und Aussagekraft.
+</button><br>
+                        </div>
+                        </div><br>
+                        <button class="ebene1" id="gleichungen">M6 Lernbereich 7: Gleichungen und Formeln</button><br>
+                        <div id="aufgleichungen">
+                        <div class="kompetenz">
+                                <button class="k"  id="bM681">...lösen Zahlenrätsel und Aufgaben zum Themenkomplex Volumen von Quadern durch systematisches Probieren und Durchführen von Umkehraufgaben, um ihr Verständnis für Variablen und Gleichungen zu vertiefen.
+</button><br>
+                                    </div></div>
+                        
+                        
+                        </div>
+            
+            <button class="fach" id="englisch">E6 Englisch</button>
+            <div id="aufenglisch">
+                <button class="ebene1" id="KommunikativeKompetenzen">E6 1 Kommunikative Kompetenzen</button><br>
+                <div id="aufKommunikativeKompetenzen">
+                    <button class="ebene2" id="KommunikativeFertigkeiten">E6 1.1 Kommunikative Fertigkeiten</button><br>
+                    <div id="aufKommunikativeFertigkeiten">
+                        <button class="ebene3" id="sprechen">E6 Sprechen</button><br>
+                        <div class="kompetenzen" id="aufsprechen">
+                            <button class="k"  id="bE61131">...verständigen sich in alltäglichen Begegnungs- und Dienstleistungssituationen (z. B. Begegnung in der Jugendherberge) und beteiligen sich an Gesprächen, in denen es um einen einfachen direkten Austausch alltäglicher konkreter Informationen geht (z. B. Wohnung und eigenes Zimmer). Dabei formulieren sie kurze Aussagen und Fragen und reagieren auf solche. Bei Bedarf teilen sie in einfacher sprachlicher Form mit, dass sie etwas nicht verstehen.
+</button><br>
+                            <button class="k"  id="bE61132">...berichten und erzählen von Tätigkeiten und Ereignissen aus ihrem Erfahrungsbereich (z. B. Schulfeste, Sportveranstaltungen). Dafür verwenden sie sehr häufig gebrauchte Redemittel und grundlegende Strukturen.
+</button><br>
+                            <button class="k"  id="bE61133">...geben eine kurze einfache Präsentation zu einem vertrauten Thema (z. B. Heimatort) in Form einer einfachen listenhaften Aufzählung. Dabei setzen sie Visualisierungstechniken ein (z. B. Plakate) und nutzen kurze Notizen als Gedächtnisstütze. Zur Vorbereitung orientieren sie sich an detaillierten Mustern.
+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                        
+        </div>
+        </div>
+        
+<!-- Formulierungscontainer -->         
+        
+        <div class="flex-container2" id="formulierungen">
+            
+<!-- Checkboxes -->
+        
+        <div class="flex-container" id="checkboxes">
+                        <p class="Ueberschriften">Deutsch</p>
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D3"><div class="radtext">nur teils erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        <p class="Ueberschriften">Mathematik</p>
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M3"><div class="radtext">nur teils erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        <p class="Ueberschriften">Englisch</p>       
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E3"><div class="radtext">nur teils erfüllt </div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        
+                        
+            
+                        <button id="new">neue Schülerin</button>
+            
+            
+        </div>
+        
+        <!-- Textboxes -->
+        
+        <div class="flex-container" id="textboxen">
+            <textarea id="text"></textarea>
+
+        </div>
+        </div>
+    
+</body></html>

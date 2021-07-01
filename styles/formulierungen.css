@@ -1,0 +1,192 @@
+/*Style allgemein*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-container2 {
+    display: flex;
+    flex-direction: row;
+}
+#formulierungen{
+    flex-direction: row;
+}
+
+#oben{
+    flex-direction: row;
+}
+
+button:hover{
+    background-color: #ECEEF8;
+}
+/*Style Text*/
+
+h1{
+
+    padding: 20px 20px;
+    color: #004875 ;
+    font-size: 3em;
+    text-align: left;
+    margin-top: 0px;
+}
+
+#erklärung{
+    font-size: 1.5em;
+    margin-left: 70px;
+}
+
+/*Links zu anderen Seiten*/
+
+a{
+    color: white;
+    font-size: 1.5em;
+    padding: 15px 15px;
+    text-align: center;
+    background-color: #004875;
+    margin: 0px;
+    margin-left: 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #004875;
+    transition-duration: 0.3s;
+}
+
+#buttonIndex{
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+a:visited{
+    color: white;
+}
+
+
+/*Fächer allgemein Design*/
+
+.fach {
+    width: 1020px;
+    font-size: 1.5em;
+    text-align: left;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: white;
+    border: 3px solid;
+    cursor: pointer;
+    margin: 10px;
+    transition-duration: 0.3s;
+}
+
+#deutsch{
+    border-color:  #C7EF84;
+}
+
+#mathe{
+    border-color: #FFE28A;
+}
+
+#englisch{
+    border-color: #B7EAFD;
+}
+
+/*Ebenen Design*/
+
+.ebene1, .ebene2, .ebene3{
+    width: 800px;
+    font-size: 1em;
+    text-align: left;
+    border: 2px solid ##004875;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: white;
+    cursor: pointer;
+    margin: 2px;
+    margin-left: 40px;
+    transition-duration: 0.3s;
+}
+
+.ebene2{
+    margin-left: 80px;
+}
+
+.ebene3{
+    margin-left: 120px;
+}
+
+/*Kompetenzendesign*/
+
+.k{
+    color: black;
+    padding: 20px 20px;
+    font-size: 1em;
+    width: 1000px;
+    background-color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+/*Radio checks + Überschriften Radio Checks*/
+
+.rad{
+    cursor: pointer;
+    margin: 2 px;
+}
+
+input[type='radio'] 
+{ 
+   transform: scale(1.5); 
+}
+
+
+#checkboxes{
+    font-size: 1em;
+    padding: 20px ;
+}
+
+.Ueberschriften{
+
+    font-size: 1.5em;
+    padding: 10px 20px;
+    background-color: #ECEEF8;
+    border: 1px solid #004875;
+    border-radius: 5px;
+}
+
+.radtext{
+    font-size: 1em;
+    margin-left: 5px;
+    margin-right: 20px;
+}
+
+/*Textbox*/
+
+#text{
+    padding: 10px;
+    border: 1.5px solid #004875;
+    border-radius: 4px;
+    height: 150px;
+    width: 400px;
+    margin-top: 80px;
+    margin-left: 200px;
+}
+
+/*Button neuer Schüler*/
+
+#new{
+    align-self: center;
+    width: 80px;
+    color: white;
+    background-color: #004875;
+    transition-duration: 0.3s;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #004875;
+}
+#new:hover, a:hover{
+    background-color: #F6F8FA;
+    color: black;
+}

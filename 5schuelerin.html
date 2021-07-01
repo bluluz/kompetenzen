@@ -1,0 +1,330 @@
+<html lang="de">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="media/notebook2.ico" type="image/vnd.microsoft.icon" />
+    <title>Kompetenzen 5.Klasse Schülerin</title>
+    <link rel="stylesheet" href="styles/formulierungen.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+
+        
+/* Copy entsprechende Formulierung zu Clipboard + show in textarea */
+
+        $(document).ready(function() {
+            
+            
+            /*neuer Schüler*/
+            $("#new").click(function() {
+            $('.rad').prop('checked', false);
+            $("#text").val("");
+            });
+            
+            $("input[name='kompetenzenglisch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzenglisch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzdeutsch']").change(function() {
+                var checkedCountries = $("input[name='kompetenzdeutsch']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+            $("input[name='kompetenzmathe']").change(function() {
+                var checkedCountries = $("input[name='kompetenzmathe']:checked");
+                var countries = [];
+                for (var i = 0; i < checkedCountries.length; i++) {
+                    countries.push(checkedCountries[i].value);
+                }
+                $("#text").val(countries.join(" "));
+                var copyText = document.getElementById("text");
+                copyText.select();
+                document.execCommand("Copy");
+
+            });
+            
+/* Hide/Show Menu */
+            
+            /*Englisch*/
+            
+            $("#englisch").click(function() {
+                $("#aufenglisch").toggle();
+            });
+            $('#aufenglisch').hide();
+
+            $("#KommunikativeKompetenzen").click(function() {
+                $("#aufKommunikativeKompetenzen").toggle();
+            });
+            $('#aufKommunikativeKompetenzen').hide();
+
+            $("#KommunikativeFertigkeiten").click(function() {
+                $("#aufKommunikativeFertigkeiten").toggle();
+            });
+            $('#aufKommunikativeFertigkeiten').hide();
+
+            $("#Hoerverstehen").click(function() {
+                $("#aufHoerverstehen").toggle();
+            });
+            $('#aufHoerverstehen').hide();
+
+            $("#Leseverstehen").click(function() {
+                $("#aufLeseverstehen").toggle();
+            });
+            $('#aufLeseverstehen').hide();
+            
+            
+            
+            /*Deutsch*/
+            
+            $("#deutsch").click(function() {
+                $("#aufdeutsch").toggle();
+            });
+            $('#aufdeutsch').hide();
+            
+            $("#lernbereich1").click(function() {
+                $("#auflernbereich1").toggle();
+            });
+            $('#auflernbereich1').hide();
+            
+            $("#verstehendzuhören").click(function() {
+                $("#aufverstehendzuhören").toggle();
+            });
+            $('#aufverstehendzuhören').hide()
+            
+            
+            /*Mathe*/
+            
+            $("#mathe").click(function() {
+                $("#aufmathe").toggle();
+            });
+            $('#aufmathe').hide();
+            
+            $("#natürlichezahlen").click(function() {
+                $("#aufnatürlichezahlen").toggle();
+            });
+            $('#aufnatürlichezahlen').hide();
+            
+            $("#übermilliarde").click(function() {
+                $("#aufübermilliarde").toggle();
+            });
+            $('#aufübermilliarde').hide();
+
+
+            
+/* Go to Auswahl-Mode */
+            
+            /*Englisch Kompetenzen*/
+            
+            $("#bE51111").click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery("#bE51111").clone();
+                element.appendTo(($('#englisch')).empty());
+                $("#E1").val("Die Schülerin versteht sicher einfache Äußerungen zu Themen aus ihrem Erfahrungsbereich (z. B. Familie), wenn deutlich gesprochen wird und das Gesagte direkt an Sie gerichtet sowie bei Bedarf mimisch und gestisch unterstützt und mehrfach wiederholt wird.");
+                $("#E2").val("Die Schülerin versteht recht sicher einfache Äußerungen zu Themen aus ihrem Erfahrungsbereich (z. B. Familie), wenn deutlich gesprochen wird und das Gesagte direkt an Sie gerichtet sowie bei Bedarf mimisch und gestisch unterstützt und mehrfach wiederholt wird.");
+                $("#E3").val("Die Schülerin versteht noch nicht immer sicher einfache Äußerungen zu Themen aus ihrem Erfahrungsbereich (z. B. Familie), wenn deutlich gesprochen wird und das Gesagte direkt an sie gerichtet sowie bei Bedarf mimisch und gestisch unterstützt und mehrfach wiederholt wird.");
+                $("#E4").val("Die Schülerin versteht noch nicht sicher einfache Äußerungen zu Themen aus ihrem Erfahrungsbereich (z. B. Familie), wenn deutlich gesprochen wird und das Gesagte direkt an sie gerichtet sowie bei Bedarf mimisch und gestisch unterstützt und mehrfach wiederholt wird.");
+            });
+            
+            $('#bE51112').click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery('#bE51112').clone();
+                element.appendTo($('#englisch').empty());
+                $("#E1").val("Die Schülerin erfasst genau, worum es in kurzen sorgfältig artikulierten Hör- oder Hörsehtexten mit sehr vertrauter Thematik geht, wenn der Text einfach strukturiert ist, einfache Satzstrukturen enthält und alle texttragenden Schlüsselwörter bekannt sind (z. B. Geschichten, persönliche Mitteilungen auf dem Anrufbeantworter).");
+                $("#E2").val("Die Schülerin erfasst, worum es in kurzen sorgfältig artikulierten Hör- oder Hörsehtexten mit sehr vertrauter Thematik geht, wenn der Text einfach strukturiert ist, einfache Satzstrukturen enthält und alle texttragenden Schlüsselwörter bekannt sind (z. B. Geschichten, persönliche Mitteilungen auf dem Anrufbeantworter).");
+                $("#E3").val("Die Schülerin erfasst bisweilen, worum es in kurzen sorgfältig artikulierten Hör- oder Hörsehtexten mit sehr vertrauter Thematik geht, wenn der Text einfach strukturiert ist, einfache Satzstrukturen enthält und alle texttragenden Schlüsselwörter bekannt sind (z. B. Geschichten, persönliche Mitteilungen auf dem Anrufbeantworter).");
+                $("#E4").val("Die Schülerin erfasst noch ungenau, worum es in kurzen sorgfältig artikulierten Hör- oder Hörsehtexten mit sehr vertrauter Thematik geht, wenn der Text einfach strukturiert ist, einfache Satzstrukturen enthält und alle texttragenden Schlüsselwörter bekannt sind (z. B. Geschichten, persönliche Mitteilungen auf dem Anrufbeantworter).");
+            });
+            
+            $('#bE51113').click(function() {
+                $("#aufenglisch").hide();
+                var element = jQuery('#bE51113').clone();
+                element.appendTo($('#englisch').empty());
+                $("#E1").val("Die Schülerin entnimmt einfachen altersgemäßen themenbezogenen Hör- oder Hörsehtexten in überwiegend britischer Standardsprache sicher wesentliche Einzelheiten (z. B. relevante Angaben zum Schulalltag), auch wenn einzelne Hintergrundgeräusche (z. B. Pausenklingel) das Verstehen gelegentlich erschweren.");
+                $("#E2").val("Die Schülerin entnimmt einfachen altersgemäßen themenbezogenen Hör- oder Hörsehtexten in überwiegend britischer Standardsprache wesentliche Einzelheiten (z. B. relevante Angaben zum Schulalltag), auch wenn einzelne Hintergrundgeräusche (z. B. Pausenklingel) das Verstehen gelegentlich erschweren.");
+                $("#E3").val("Die Schülerin entnimmt einfachen altersgemäßen themenbezogenen Hör- oder Hörsehtexten in überwiegend britischer Standardsprache noch nicht immer wesentliche Einzelheiten (z. B. relevante Angaben zum Schulalltag). Einzelne Hintergrundgeräusche (z. B. Pausenklingel) erschweren ihr das Verstehen bisweilen.");
+                $("#E4").val("Die Schülerin entnimmt einfachen altersgemäßen themenbezogenen Hör- oder Hörsehtexten in überwiegend britischer Standardsprache oft keine wesentlichen Einzelheiten (z. B. relevante Angaben zum Schulalltag). Einzelne Hintergrundgeräusche (z. B. Pausenklingel) erschweren ihr das Verstehen deutlich.");
+            });
+            
+            
+            /*Deutsch Kompetenzen*/
+            
+            $('#bD5111').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD5111').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin zeigt oft ihre Aufmerksamkeit in Zuhörsituationen durch Rückmeldungen und Nachfragen.");
+                $("#D2").val("Die Schülerin zeigt ihre Aufmerksamkeit in Zuhörsituationen durch Rückmeldungen und Nachfragen.");
+                $("#D3").val("Die Schülerin zeigt bisweilen ihre Aufmerksamkeit in Zuhörsituationen durch Rückmeldungen und Nachfragen.");
+                $("#D4").val("Die Schülerin zeigt wenig ihre Aufmerksamkeit in Zuhörsituationen durch Rückmeldungen und Nachfragen.");
+            });
+            
+            $('#bD5112').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD5112').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin formuliert sicher zu gesprochenen Texten unter Anleitung einfache Verständnisfragen.");
+                $("#D2").val("Die Schülerin formuliert recht sicher zu gesprochenen Texten unter Anleitung einfache Verständnisfragen.");
+                $("#D3").val("Die Schülerin formuliert bisweilen recht sicher zu gesprochenen Texten unter Anleitung einfache Verständnisfragen.");
+                $("#D4").val("Die Schülerin formuliert noch sehr unsicher zu gesprochenen Texten unter Anleitung einfache Verständnisfragen.");
+            });
+            
+            $('#bD5113').click(function() {
+                $("#aufdeutsch").hide();
+                var element = jQuery('#bD5113').clone();
+                element.appendTo(($('#deutsch')).empty());
+                $("#D1").val("Die Schülerin folgt Inhalten aus Hörmedien gut (z. B. kleine Erzählungen, Fabeln) und gibt das Gehörte genau in eigenen Worten wieder.");
+                $("#D2").val("Die Schülerin folgt Inhalten aus Hörmedien (z. B. kleine Erzählungen, Fabeln) und gibt das Gehörte recht genau in eigenen Worten wieder.");
+                $("#D3").val("Die Schülerin folgt Inhalten aus Hörmedien zunehmend sicherer (z. B. kleine Erzählungen, Fabeln) und gibt das Gehörte bisweilen recht genau in eigenen Worten wieder.");
+                $("#D4").val("Die Schülerin folgt Inhalten aus Hörmedien unsicher (z. B. kleine Erzählungen, Fabeln) und gibt das Gehörte noch ungenau in eigenen Worten wieder.");
+            });
+            
+            
+            /*Mathe Kompetenzen*/
+            
+            $('#bM5111').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM5111').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin erfasst, liest und bildet große natürliche Zahlen sicher in verschiedenen Darstellungen (Zahlengerade, Stellenwerttafel, Wortform). Das Wechseln zwischen den Darstellungsformen gelingt ihr.");
+                $("#M2").val("Die Schülerin erfasst, liest und bildet große natürliche Zahlen recht sicher in verschiedenen Darstellungen (Zahlengerade, Stellenwerttafel, Wortform). Das Wechseln zwischen den Darstellungsformen gelingt ihr meist.");
+                $("#M3").val("Die Schülerin erfasst, liest und bildet große natürliche Zahlen bisweilen recht sicher in verschiedenen Darstellungen (Zahlengerade, Stellenwerttafel, Wortform). Das Wechseln zwischen den Darstellungsformen bereitet ihr zunehmend weniger Probleme.");
+                $("#M4").val("Die Schülerin erfasst, liest und bildet große natürliche Zahlen noch unsicher in verschiedenen Darstellungen (Zahlengerade, Stellenwerttafel, Wortform). Das Wechseln zwischen den Darstellungsformen bereitet ihr Probleme.");
+            });
+            
+            $('#bM5112').click(function() {
+                $("#aufmathe").hide();
+                var element = jQuery('#bM5112').clone();
+                element.appendTo(($('#mathe')).empty());
+                $("#M1").val("Die Schülerin kann ohne Probleme natürliche Zahlen im nach links erweiterten Stellenwertsystem über eine Milliarde hinaus ordnen, vergleichen und zerlegen und in verschiedenen Schritten vor- und rückwärts zählen.");
+                $("#M2").val("Die Schülerin kann natürliche Zahlen im nach links erweiterten Stellenwertsystem über eine Milliarde hinaus ordnen, vergleichen und zerlegen und in verschiedenen Schritten vor- und rückwärts zählen.");
+                $("#M3").val("Die Schülerin kann bisweilen ohne Probleme natürliche Zahlen im nach links erweiterten Stellenwertsystem über eine Milliarde hinaus ordnen, vergleichen und zerlegen und in verschiedenen Schritten vor- und rückwärts zählen.");
+                $("#M4").val("Die Schülerin kann noch nicht sicher natürliche Zahlen im nach links erweiterten Stellenwertsystem über eine Milliarde hinaus ordnen, vergleichen und zerlegen und in verschiedenen Schritten vor- und rückwärts zählen.");
+            });
+            
+            
+            
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <!-- Seite oben -->
+    <div class="flex-container" id="buttonIndex">
+        <a href="index.html">Startseite</a>
+        <a href="5Schueler.html">Schüler</a>
+    </div>
+    <div id="Titel">
+        <h1><img src="media/notebook2.svg" width=50px;> 5. Klasse Schülerin</h1>
+    </div>
+    <div class="flex-container" id="bodie">
+        <div id="auswahl">
+            
+            
+<!-- Auswahl -->
+            
+            <button class="fach" id="deutsch">D5 Deutsch</button><br>
+                    <div id="aufdeutsch">
+                        <button class="ebene1" id="lernbereich1">D5 Lernbereich 1: Sprechen und Zuhören</button>
+                        <div id="auflernbereich1">
+                            <button class="ebene2" id="verstehendzuhören">D5 1.1 Verstehend zuhören</button>
+                            <div id="aufverstehendzuhören">
+                                <div class="kompetenz">
+                                    <button class="k" id="bD5111">...zeigen ihre Aufmerksamkeit in Zuhörsituationen durch Rückmeldungen und Nachfragen.</button><br>
+                                    <button class="k" id="bD5112">...formulieren zu gesprochenen Texten unter Anleitung einfache Verständnisfragen.</button><br>
+                                    <button class="k"  id="bD5113">...folgen Inhalten aus Hörmedien (z. B. kleine Erzählungen, Fabeln) und geben das Gehörte in eigenen Worten wieder.</button>
+                                </div></div></div></div>
+            
+            <button class="fach" id="mathe">M5 Mathematik</button><br>
+                    <div id="aufmathe">
+                        <button class="ebene1" id="natürlichezahlen">M5 Lernbereich 1: Natürliche Zahlen</button>
+                        <div id="aufnatürlicheZahlen">
+                            <button class="ebene2" id="übermilliarde">M5 1.1 Der Zahlenraum über eine Milliarde hinaus</button>
+                            <div id="aufübermilliarde">
+                                <div class="kompetenz">
+                                    <button class="k"  id="bM5111">...erfassen, lesen und bilden große natürliche Zahlen in verschiedenen Darstellungen (Zahlengerade, Stellenwerttafel, Wortform) und wechseln zwischen den Darstellungsformen.</button><br>
+                                    <button class="k"  id="bM5112">...ordnen, vergleichen und zerlegen natürliche Zahlen im nach links erweiterten Stellenwertsystem über eine Milliarde hinaus und zählen in verschiedenen Schritten vor- und rückwärts.</button><br>
+                                    </div></div></div></div>
+            
+            <button class="fach" id="englisch">E5 Englisch</button>
+            <div id="aufenglisch">
+                <button class="ebene1" id="KommunikativeKompetenzen">E5 1 Kommunikative Kompetenzen</button>
+                <div id="aufKommunikativeKompetenzen">
+                    <button class="ebene2" id="KommunikativeFertigkeiten">E5 1.1 Kommunikative Fertigkeiten</button>
+                    <div id="aufKommunikativeFertigkeiten">
+                        <button class="ebene3" id="Hoerverstehen">E5 Hör- und Hörsehverstehen</button><br>
+                        <div class="kompetenzen" id="aufHoerverstehen">
+                            <button class="k"  id="bE51111">...verstehen einfache Äußerungen zu Themen aus ihrem Erfahrungsbereich (z. B. Familie), wenn deutlich gesprochen wird und das Gesagte direkt an sie gerichtet sowie bei Bedarf mimisch und gestisch unterstützt und mehrfach wiederholt wird.</button><br>
+                            <button class="k"  id="bE51112">...erfassen, worum es in kurzen sorgfältig artikulierten Hör- oder Hörsehtexten mit sehr vertrauter Thematik geht, wenn der Text einfach strukturiert ist, einfache Satzstrukturen enthält und alle texttragenden Schlüsselwörter bekannt sind (z. B. Geschichten, persönliche Mitteilungen auf dem Anrufbeantworter).</button><br>
+                            <button class="k"  id="bE51113">...entnehmen einfachen altersgemäßen themenbezogenen Hör- oder Hörsehtexten in überwiegend britischer Standardsprache wesentliche Einzelheiten (z. B. relevante Angaben zum Schulalltag), auch wenn einzelne Hintergrundgeräusche (z. B. Pausenklingel) das Verstehen gelegentlich erschweren.</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                                        
+        </div>
+        </div>
+        
+<!-- Formulierungscontainer -->         
+        
+        <div class="flex-container2" id="formulierungen">
+            
+<!-- Checkboxes -->
+        
+        <div class="flex-container" id="checkboxes">
+                        <p class="Ueberschriften">Deutsch</p>
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D3"><div class="radtext">nur teils erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzdeutsch" id="D4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        <p class="Ueberschriften">Mathematik</p>
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M3"><div class="radtext">nur teils erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzmathe" id="M4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        <p class="Ueberschriften">Englisch</p>       
+                        <div class="flex-container2">
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E1"><div class="radtext">übertroffen</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E2"><div class="radtext">erfüllt</div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E3"><div class="radtext">nur teils erfüllt </div></div>
+                        <div class="flex-container2"><input type="radio" class="rad" name="kompetenzenglisch" id="E4"><div class="radtext">nicht/nur mit Hilfe</div></div><br>
+                        </div>
+                        
+                        
+            
+                        <button id="new">neue Schülerin</button>
+            
+            
+        </div>
+        
+        <!-- Textboxes -->
+        
+        <div class="flex-container" id="textboxen">
+            <textarea id="text"></textarea>
+
+        </div>
+        </div>
+    
+</body></html>
